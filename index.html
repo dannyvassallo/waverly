@@ -4,33 +4,26 @@
 <Title> Javascript Class Exercise</title>
 </head>
 <body>
-<Script type="text/javascript">
+<script type="text/javascript">
 function food_script(){
-//Confirm if user likes steak
-var likeSteak=confirm("Do you like steak?");
-//If user likes steak
-if (likeSteak){
-  alert("Here's a steak sandwich!");
-//If user doesn't like steak
-else
-document.write("Here's a tofu stir fry!");
-window.onload=food_script();
+  var likeSteak=confirm("Do you like steak?");
+  if (likeSteak){
+    alert("Here's a steak sandwich!");
+  }else{
+    document.write("Here's a tofu stir fry!");
+    window.onload=food_script();
+  }
+  var birthYear=prompt("What year were you born?");
+  if (birthYear < 1968){
+    alert("You are older than John!");
+  }
+  else if (birthYear > 1968){
+    alert("You are younger than John!");
+  } else {
+    alert("You are around the same age as John!");
+  }
 }
-//Ask birth year of user
-var birthYear=prompt("What year were you born?");
-//If born before 1968
-if (birthYear < 1968){
-  alert("You are older than John!");
-}
-//If born after 1968
-else if (birthYear > 1968){
-  alert("You are younger than John!");
-}
-//If born on the same year as John
-else
-{
-  alert("You are around the same age as John!");
-}
+food_script();
 </script>
 </body>
 </html>
